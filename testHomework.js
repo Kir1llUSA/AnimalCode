@@ -28,7 +28,8 @@ describe('Horse and Farmer', async function Deploying() {
     farmerContract = await farmerFactory.deploy();
   });
   it('Horse has the correct name', async function () {
-    expect('SuperHorse').to.be.equal(horseName);
+    console.log(await horseContract._name_());
+    expect(await horseContract._name_()).to.be.equal(horseName); //
   });
   it('Horse can sleep', async function () {
     const sleep = await horseContract.sleep();
@@ -74,8 +75,8 @@ describe('Dog and Farmer', function () {
     dogContract = await dogFactory.deploy(dogName);
   });
   it('Dog has the correct name', async function () {
-    expect('SuperDog').to.be.equal(dogName); // Проверить имя конструктора или имя контракта ,
-    // немного не могу понять, как это сделать
+    console.log(await dogContract._name_());
+    expect(await dogContract._name_()).to.be.equal(dogName); //
   });
   it('Dog can sleep', async function () {
     expect(await dogContract.sleep()).to.be.equal('Z-z-z-z-z....');
