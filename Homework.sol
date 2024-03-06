@@ -62,7 +62,9 @@ contract Cow is Herbivore {
 }
 
 contract Horse is Herbivore {
+string public _name;
   constructor(string memory name) HasName(name) {
+    _name = name;
   }
 
   function speak() pure override public returns (string memory) {
@@ -115,7 +117,10 @@ abstract contract Omnivores is Animal, HasName {
 }  
 
 contract Dog is Omnivores {
-    constructor(string memory name) HasName(name) {}
+string public _name;
+    constructor(string memory name) HasName(name) {
+    _name = name;      
+}
     
     
     function speak() pure override  public returns (string memory) {
