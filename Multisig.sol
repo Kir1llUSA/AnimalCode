@@ -7,12 +7,12 @@ import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 contract MultisigFactory {
  
-  event NewMultisigVault(address indexed _contract);
+  event NewMultisig(address indexed _contract);
   
     function deployWallet (address[] memory _owners, uint8 _required) external  {
-        address wallet = address(new MultisigVault(_owners, _required));
+        address wallet = address(new Multisig(_owners, _required));
         
-        emit NewMultisigVault(wallet);
+        emit NewMultisig(wallet);
      }
 
 }
