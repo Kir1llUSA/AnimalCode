@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First DApp</title>
+    <link rel="stylesheet" href="./Homework.css" />
+  </head>
+  <body>
+    <div class="page1">
+      <ul class="navbar ">
+        <li class="Currencies" id="EtherSwitcher">ETH</li>
+      </ul>
+    </div>
+    <div class="page2">
+      <ul class="navbar ">
+        <li class="Currencies" id="ERC20Switcher">ERC20</li>
+      </ul>
+    </div>
+    <div class="page3">
+      <ul class="navbar ">
+        <li class="Currencies" id="BTCSwitcher">BTC</li>
+      </ul>
+    </div>
+    
+    <div class="Window">
+      <div class="connectWrapper active ">
+        <button id="connectMetamask"> Connect Metamask</button> 
+        <button id="connectBTC">Connect Bitcoin </button>
+      </div>
+      <div id="TX-link" class="transaction-link ">
+          <span id="text">Transaction was sent 
+            <p>Etherscan:
+              <a href="https://sepolia.etherscan.io">sepolia</a> <p>Transaction hash:</p> <p><Pending id="tx-hash"> </Pending></p></a></div>
+            </p>            
+          </span> 
+          <div id="TX-linkBTC" class="transaction-link ">
+            <span id="text">Transaction was sent 
+              <p>Etherscan:
+                <a href="https://live.blockcypher.com/">Blockcypher</a> <p>Transaction hash:</p> <p><Pending id="tx-hashBTC"> </Pending></p></a></div>
+              </p>            
+            </span> 
+       
+      <div id="wrapper-eth" class="wrapper">
+         <div class="balance">
+          <div class="Currency-Name">Ethereum</div>
+          <div class="balanceItem"> Balance: <span id="current-balance">0.0000  </div>
+        </div>
+        <div class="Account-Data">
+          <div class="Account">Your Account:</div>
+          <div id="AddressETH">0x0000000000000000000000000000000000000000</div>
+        </div>
+        <div class="Coin-Transfer">
+          <div class="Transfer"></div>
+          <div class="transferData">
+            <input id="address-to" type="text" placeholder="Address" />
+            <input id="Amount-toSend" type="number" min="0" placeholder="Amount" />
+          </div>
+          <div class="transfer-button"><button id="B-transfer">Transfer</button></div>
+          
+        </div>
+        
+      </div>
+        
+      <div id="wrapper-erc20" class="wrapper">
+        <div class="balance">
+         <div class="token-name"> <span id="ERC20Token-name">....</span></div>
+         <div class="balanceItem"> Balance: <span id="current-balanceERC">0.0000 <span id="ERC20Token-Symbol"> ....</span></div>
+       </div>
+       <div class="Account-Data">
+         <div class="Account">Your Account:</div>
+         <div id="AddressERC20">0x0000000000000000000000000000000000000000</div>
+       </div>
+       <div class="Coin-Transfer">
+         <div class="Transfer"></div>
+         <div class="transferData">
+           <input id="address-to-ERC20" type="text" placeholder="Address" />
+           <input id="Amount-toSend-ERC20" type="number" min="0" placeholder="Amount" />
+         </div>
+         <div class="transfer-button"><button id="B-transferERC20">Transfer</button></div>
+         
+       </div>
+       
+     </div>
+
+     <div id="wrapper-btc" class="wrapper">
+      <div class="balance">
+       <div class="Currency-Name">Bitcoin </div>
+       <div class="balanceItem"> Balance: <span id="current-balanceBTC">0.0000 <span> BTC</span></div>
+     </div>
+     <div class="Account-Data">
+       <div class="Account">Your Account:</div>
+       <div id="AddressBTC">0x0000000000000000000000000000000000000000</div>
+     </div>
+     <div class="Coin-Transfer">
+      <div class="setTxFee">
+        <label for="BitcoinSendFee" >Fee</label>
+        <input type="number" min="0" placeholder="Fee" id="BitcoinSendFee" value="0.000002">
+      </div> 
+      </div>
+       <div class="Transfer"></div>
+       <div class="transferData">
+         <input id="address-to-BTC" type="text" placeholder="Address" />
+         <input id="Amount-toSend-BTC" type="number" min="0" placeholder="Amount" />
+       </div>
+       <div class="transfer-button"><button id="B-transferBTC">Transfer</button></div>
+       
+     </div>
+     <div id="BTCAuthwrapper" class="wrapper">
+      <div class="title"> BTC Auth</div>
+      <div class="btcGenerateMnemonic">
+      <label for="btcMnemonicField" class="title">Mnemonic Phrase:</label>  
+      <input id="btcMnemonicField">
+      <div class="btcGenerateMnemonic">
+      <label for="btcPrivateKeyField" class="title">Private Key:</label>  
+      <input id="btcPrivateKeyField">
+    </div>  
+    <div class="ButtonsBTC">
+    <button id="btcAuthConnectButton">Connect</button>
+    <button id="btcGenerateMnemonicButton">Generate Wallet</button>
+  </div>
+    </div>
+    </div>
+     
+   </div>
+
+    </div>
+  
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bitcoinjs-lib-browser@5.1.7/bitcoinjs.min.js"
+    type="application/javascript"></script>
+
+    <script type="module">
+      import { ethers } from 'https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.min.js';
+      // Your code here...
+    </script>
+    <script type="module" src="./Homework.js"></script>
+  </body>
+</html>
