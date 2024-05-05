@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(./Photo/hero-img_copy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.Currencies {
+  color: rgb(0, 129, 173);
+  margin-left: 3px;
+  pointer-events: stroke;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+}
+
+.navbar {
+  background-color: rgba(64, 15, 142, 0.699);
+  height: 40px;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  font-size: 20px;
+  list-style: none;
+}
+.navbar li {
+  cursor: pointer;
+  transition: opacity, 1.3s;
+}
+.navbar li:hover {
+  color: rgb(235, 186, 9);
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.navbar li.active {
+  color: rgb(235, 186, 9);
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.Window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 40px);
+  padding-left: 60px;
+}
+.wrapper {
+  display: none;
+  flex-direction: column;
+  padding: 28px, 12px;
+  border-style: solid;
+  width: 600px;
+  height: 260px;
+  border-radius: 7px;
+  border-color: rgb(2, 18, 11);
+  background-color: rgb(9, 111, 145);
+}
+.connectWrapper {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px, 12px;
+  border-style: solid;
+  width: 200px;
+  height: 130px;
+  border-radius: 7px;
+  border-color: rgb(2, 18, 11);
+  background-color: rgb(16, 108, 139);
+}
+.transaction-link {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px, 12px;
+  border-style: solid;
+  width: 600px;
+  height: 150px;
+  border-radius: 7px;
+  border-color: rgb(2, 18, 11);
+  background-color: rgb(9, 111, 145);
+}
+#text {
+  justify-content: center;
+  font-size: 15px;
+  font-family: monospace;
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+
+.wrapper.active,
+.connectWrapper.active,
+.transaction-link.active {
+  display: flex;
+}
+
+#connectMetamask,
+#connectBTC {
+  font-family: monospace;
+  background-color: bisque;
+  font-size: 20px;
+  transition: background-color, 1.6s;
+}
+#connectMetamask:hover,
+#connectBTC:hover,
+#btcGenerateMnemonicButton:hover,
+#btcAuthConnectButton:hover {
+  background-color: rgb(235, 157, 61);
+  cursor: pointer;
+}
+
+.Currency-Name,
+#ERC20Token-name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  margin-left: 245px;
+  color: rgb(29, 13, 13);
+  transition: opacity, 1.2s;
+}
+.Currency-Name:hover,
+#ERC20Token-name:hover,
+.title:hover {
+  color: rgb(102, 53, 53);
+}
+
+.balanceItem,
+.Account-Data {
+  flex-direction: column;
+  display: flex;
+  font-family: monospace;
+  font-size: 17px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 12px;
+  margin-top: 5px;
+  padding-bottom: 18px;
+  border-bottom: 5px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: rgb(42, 35, 141);
+}
+
+.Coin-Transfer {
+  flex-direction: column;
+  display: flex;
+  font-family: monospace;
+  font-size: 17px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+
+.transferData {
+  margin-left: 100px;
+  margin-top: 11px;
+  size: 1px;
+}
+
+.transfer-button {
+  margin-top: 20px;
+  margin-left: 250px;
+  width: 10px;
+  height: 10px;
+}
+#Address {
+  width: 150px;
+  height: 25px;
+
+  margin-right: 50px;
+}
+#Amount {
+  border: solid;
+  width: 150px;
+  height: 25px;
+  border-color: antiquewhite;
+  margin-right: 50px;
+}
+#B-transfer,
+#B-transferERC20,
+#B-transferBTC {
+  background-color: rgb(88, 146, 93);
+  border: rgb(88, 146, 93);
+  border-radius: 2px;
+  margin-bottom: 1px;
+  font-size: 17px;
+  margin-right: 10px;
+  transition: background-color, 0.5s;
+}
+#B-transferERC20:hover,
+#B-transfer:hover,
+#B-transferBTC:hover {
+  background-color: rgb(67, 163, 75);
+}
+#BitcoinSendFee {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.title {
+  font-size: large;
+  margin-left: 10px;
+  font-family: monospace;
+  margin-bottom: 10px;
+  transition: opacity, 1.2s;
+}
+
+#btcPrivateKeyField,
+#btcMnemonicField {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 25px;
+  width: 550px;
+}
+
+#btcGenerateMnemonicButton,
+#btcAuthConnectButton {
+  font-size: 20px;
+  font-family: monospace;
+  margin-right: 50px;
+  background-color: bisque;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgb(63, 82, 74);
+  transition: background-color, 1.6s;
+}
+.ButtonsBTC {
+  padding-left: 150px;
+  padding-top: 8px;
+}
+
+#BTCAuthwrapper {
+  flex-direction: column;
+  padding: 28px, 12px;
+  border-style: solid;
+  width: 577px;
+  height: 200px;
+  border-radius: 7px;
+  border-color: rgb(2, 18, 11);
+  background-color: rgb(9, 111, 145);
+}
+
+#btcMnemonicField,
+#btcPrivateKeyField {
+  font-family: monospace;
+  font-size: 12px;
+  text-decoration: bisque;
+}
